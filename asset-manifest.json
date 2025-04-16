@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/BookEchoApp/static/css/main.e6c13ad2.css",
-    "main.js": "/BookEchoApp/static/js/main.6282f9a1.js",
+    "main.css": "/BookEchoApp/static/css/main.bfb11bb5.css",
+    "main.js": "/BookEchoApp/static/js/main.782325d0.js",
     "static/js/453.68e65f3c.chunk.js": "/BookEchoApp/static/js/453.68e65f3c.chunk.js",
     "static/media/BookEchoLogo.jpg": "/BookEchoApp/static/media/BookEchoLogo.0894cc9cec94d0ada6a5.jpg",
     "index.html": "/BookEchoApp/index.html",
-    "main.e6c13ad2.css.map": "/BookEchoApp/static/css/main.e6c13ad2.css.map",
-    "main.6282f9a1.js.map": "/BookEchoApp/static/js/main.6282f9a1.js.map",
+    "main.bfb11bb5.css.map": "/BookEchoApp/static/css/main.bfb11bb5.css.map",
+    "main.782325d0.js.map": "/BookEchoApp/static/js/main.782325d0.js.map",
     "453.68e65f3c.chunk.js.map": "/BookEchoApp/static/js/453.68e65f3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.6282f9a1.js"
+    "static/css/main.bfb11bb5.css",
+    "static/js/main.782325d0.js"
   ]
 }
