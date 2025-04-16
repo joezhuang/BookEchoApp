@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../assets/logo/BookEchoLogo.jpg";
 const Logo = () => {
   const logoStyle = {
-    width: "100px",
+    width: "80px",
     height: "auto",
     margin: "20px",
     borderRadius: "15px",
