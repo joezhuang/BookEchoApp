@@ -10,7 +10,7 @@ const BlogDetailPage = () => {
   useEffect(() => {
     const fetchPost = async () => {
       const response = await client.getEntries({
-        content_type: 'blogPosts',
+        content_type: 'bookEchoBlogs',
         'fields.slug': slug,
         limit: 1
       });

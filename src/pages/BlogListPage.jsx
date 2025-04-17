@@ -88,7 +88,7 @@ const BlogListPage = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await client.getEntries({ content_type: 'blogPosts' });
+      const response = await client.getEntries({ content_type: 'bookEchoBlogs' });
       setPosts(response.items);
     };
 
