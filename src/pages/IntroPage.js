@@ -276,7 +276,7 @@ const IntroPage = () => {
 const containerStyle = {
   padding: "40px",
   textAlign: "center",
-  maxWidth: "800px",
+  maxWidth: "900px",
   margin: "0 auto",
   minHeight: "100vh", // Make the container take at least the full height of the viewport
   display: "flex",

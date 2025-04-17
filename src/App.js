@@ -140,9 +140,12 @@
 
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import IntroPage from "./components/IntroPage";
-import ExplorePage from "./components/ExplorePage";
-import AboutPage from "./components/AboutPage";
+import IntroPage from "./pages/IntroPage";
+import ExplorePage from "./pages/ExplorePage";
+import AboutPage from "./pages/AboutPage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogEditorPage from "./pages/BlogEditorPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
 import Logo from "./components/Logo";
 import "./App.css"; // 👈 import the new CSS
 
@@ -154,7 +157,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div style={layoutStyle}>
       {/* Navigation Bar */}
       <nav>
         <div className="logo">
@@ -163,6 +166,7 @@ const App = () => {
 
         {/* Hamburger */}
         <div className="hamburger" onClick={toggleMenu}>
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
@@ -181,19 +185,35 @@ const App = () => {
             </Link>
           </li>
           <li>
+            <Link to="/blogs" onClick={() => setIsMenuOpen(false)}>
+              Blogs
+            </Link>
+          </li>
+          <li>
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
           </li>
+          {/* <li>
+            <a href="/admin" onClick={() => setIsMenuOpen(false)}>
+              Admin
+            </a>
+          </li> */}
         </ul>
       </nav>
 
       {/* Page Routes */}
-      <Routes>
-        <Route path="/" element={<IntroPage />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <main style={mainStyle}>
+        <Routes>
+          <Route path="/" element={<IntroPage />} />
+          <Route path="/explore" element={<ExplorePage />} />
+          <Route path="/blogs" element={<BlogListPage />} />
+          <Route path="/blogs/:slug" element={<BlogDetailPage />} />
+          {/* Keep only one route for blog details */}
+          <Route path="/editor" element={<BlogEditorPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </main>
 
       {/* Footer Section */}
       <footer style={footerStyle}>
@@ -201,6 +221,17 @@ const App = () => {
       </footer>
     </div>
   );
+};
+
+const layoutStyle = {
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "100vh",
+};
+
+const mainStyle = {
+  flex: 1,
+  padding: "30px",
 };
 
 const footerStyle = {

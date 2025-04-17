@@ -28,7 +28,7 @@ const AboutPage = () => {
   const sectionStyle = {
     maxWidth: "800px",
     margin: "0 auto 40px auto", // center block & spacing
-    padding: "30px 20px",
+    padding: "30px 40px",
     backgroundColor: "white",
     borderRadius: "8px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -167,19 +167,26 @@ const AboutPage = () => {
       <section style={sectionStyle}>
         <h2 style={subtitleStyle}>Join Us in the Learning Journey!</h2>
         <p style={paragraphStyle}>
-          Ready to dive into the world of interactive reading? Sign up today and
-          start your child’s journey with BookEcho!
+          Ready to dive into the world of interactive reading? Head over App
+          Store and start your child’s journey with BookEcho!
         </p>
-        <button
-          style={ctaButtonStyle}
+        <a
+          href="https://apps.apple.com/au/app/bookecho/id6742765888"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            ...ctaButtonStyle,
+            display: "inline-block",
+            textDecoration: "none",
+          }}
           onMouseOver={(e) =>
             (e.target.style.backgroundColor =
               ctaButtonHoverStyle.backgroundColor)
           }
           onMouseOut={(e) => (e.target.style.backgroundColor = "#3498db")}
         >
-          Sign Up
-        </button>
+          Download BookEcho
+        </a>
       </section>
 
       {/* Contact */}
@@ -188,7 +195,7 @@ const AboutPage = () => {
         <p style={paragraphStyle}>
           Have any questions or feedback? We'd love to hear from you! Reach out
           to us at{" "}
-          <a href="mailto:support@bookecho.com">joezhuang.aue@gmail.com</a>.
+          <a href="mailto:support@bookecho.com">joezhuang.au@gmail.com</a>.
         </p>
       </section>
     </div>

@@ -436,7 +436,7 @@ const ExplorePage = () => {
 const containerStyle = {
   padding: "40px",
   textAlign: "center",
-  maxWidth: "800px",
+  maxWidth: "900px",
   margin: "0 auto",
 };
 
@@ -485,19 +485,19 @@ const subListStyle = {
 
 const highlightSectionStyle = {
   marginBottom: "40px",
-  padding: "20px",
+  padding: "20px 40px",
   borderRadius: "8px",
 };
 
 const favoriteWordsSectionStyle = {
   marginBottom: "40px",
-  padding: "20px",
+  padding: "20px 40px",
   borderRadius: "8px",
 };
 
 const wordActivitiesSectionStyle = {
   marginBottom: "40px",
-  padding: "20px",
+  padding: "20px 40px",
   borderRadius: "8px",
 };
 
