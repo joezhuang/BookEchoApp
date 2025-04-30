@@ -89,6 +89,7 @@ const BlogListPage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await client.getEntries({ content_type: 'bookEchoBlogs' });
+      // const response = await client.getEntries({ content_type: 'blogPosts' });
       setPosts(response.items);
     };
 
@@ -96,16 +97,39 @@ const BlogListPage = () => {
   }, []);
 
   return (
+    // <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+    //   <h1>Recent Posts</h1>
+    //   {posts.map(post => (
+    //     <div key={post.sys.id}>
+    //       <li>
+    //         <Link to={`/blogs/${post.fields.slug}`}>{post.fields.title}</Link>
+    //       </li>
+    //     </div>
+    //   ))}
+    // </div>
     <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-      <h1>Blog Posts</h1>
-      {posts.map(post => (
-        <div key={post.sys.id}>
-          <h2>
-            <Link to={`/blogs/${post.fields.slug}`}>{post.fields.title}</Link>
-          </h2>
-        </div>
-      ))}
+  <h1>Recent Posts</h1>
+
+  {/* Header Row */}
+  <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', borderBottom: '2px solid #333', padding: '0.5rem 0' }}>
+    <div style={{ flex: 2, textAlign: 'left' }}>Title</div>
+    <div style={{ flex: 1 }}>Last Updated</div>
+    <div style={{ flex: 1 }}>Published</div>
+  </div>
+
+  {/* Posts */}
+  {posts.map(post => (
+    <div key={post.sys.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #ccc' }}>
+      <div style={{ flex: 2, textAlign: 'left' }}>
+        <Link to={`/blogs/${post.fields.slug}`} style={{ textDecoration: 'underline', color: 'blue' }}>
+          {post.fields.title}
+        </Link>
+      </div>
+      <div style={{ flex: 1 }}>{new Date(post.sys.updatedAt).toLocaleDateString()}</div>
+      <div style={{ flex: 1 }}>{new Date(post.sys.createdAt).toLocaleDateString()}</div>
     </div>
+  ))}
+</div>
   );
 };
 

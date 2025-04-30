@@ -146,6 +146,7 @@ import AboutPage from "./pages/AboutPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogEditorPage from "./pages/BlogEditorPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import PolicyScreen from "./pages/PolicyScreen";
 import Logo from "./components/Logo";
 import "./App.css"; // 👈 import the new CSS
 
@@ -212,12 +213,19 @@ const App = () => {
           {/* Keep only one route for blog details */}
           <Route path="/editor" element={<BlogEditorPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/policy" element={<PolicyScreen />} />
         </Routes>
       </main>
 
       {/* Footer Section */}
       <footer style={footerStyle}>
         <p>BookEcho 2025 &copy; All Rights Reserved</p>
+        <Link
+          to="/policy"
+          style={{ color: "white", textDecoration: "underline" }}
+        >
+          Privacy Policy
+        </Link>
       </footer>
     </div>
   );
