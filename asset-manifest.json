@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/BookEchoApp/static/css/main.bfb11bb5.css",
-    "main.js": "/BookEchoApp/static/js/main.0c32ceeb.js",
+    "main.js": "/BookEchoApp/static/js/main.d033ea96.js",
     "static/js/453.8ca634c0.chunk.js": "/BookEchoApp/static/js/453.8ca634c0.chunk.js",
     "static/media/BookEchoLogo.jpg": "/BookEchoApp/static/media/BookEchoLogo.0894cc9cec94d0ada6a5.jpg",
     "index.html": "/BookEchoApp/index.html",
     "main.bfb11bb5.css.map": "/BookEchoApp/static/css/main.bfb11bb5.css.map",
-    "main.0c32ceeb.js.map": "/BookEchoApp/static/js/main.0c32ceeb.js.map",
+    "main.d033ea96.js.map": "/BookEchoApp/static/js/main.d033ea96.js.map",
     "453.8ca634c0.chunk.js.map": "/BookEchoApp/static/js/453.8ca634c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfb11bb5.css",
-    "static/js/main.0c32ceeb.js"
+    "static/js/main.d033ea96.js"
   ]
 }
